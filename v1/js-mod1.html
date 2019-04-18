@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0041)http://berens.org/kib/elit/tournedo2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #ffb7ee;
+ margin: 0 24pt 0 24pt;
+ color: #8c6273;
+ margin: 0 24pt 0 24pt;
+ font-family: Century Gothic, Chalkboard;
+ font-size: 16pt;
+ background-image:url('https://i.gifer.com/BKnf.mp4'); 
+background-repeat:repeat;
+background-position: right bottom; 
+
+}
+div {
+ height: 16pt;
+}
+a {
+ color: #7c4b91;
+ text-decoration: none;
+}
+/* ]]> */
+</style>
+<script language="JavaScript" type="text/javascript">
+var t=0;
+var n=0;
+var paths=0;
+var above='hitman,lollipop,daughter,azaleas,Sienna Rose,knife,trapped,salvation'.split(',');
+var below='pain,comfort,beauty,groupies,fame,blood,straightjacket,mentally ill,adopted child,psychologist'.split(',');
+var trans='salute,diagnose,paranoia,lock up,frighten,insane,deteriorate,rot'.split(',');
+var imper='segregate,devour,administer medicine,bounce,drizzle,leap,embrace,awaken';
+imper=imper.split(',');
+var intrans='aroma,grasp,search,rebirth,lose hope,settle,have to,need to'.split(',');
+var s='s,'.split(',');
+var texture='soft,thick'.split(',');
+function rand_range(max) {
+ return Math.floor(Math.random()*(max+1));
+}
+function choose(array) {
+ return array[rand_range(array.length-1)];
+}
+function path() {
+ var p=rand_range(1);
+ var words=choose(above);
+ if ((words=='blood')&&(rand_range(3)==1)) {
+  words='salvation '+choose(trans);
+ } else {
+  words+=s[p]+' '+choose(trans)+s[(p+1)%2];
+ }
+ words+=' the '+choose(below)+choose(s)+' .';
+ return words;
+}
+function site() {
+ var words='';
+ if (rand_range(2)==1) {
+  words+=choose(above);
+ } else {
+  words+=choose(below);
+ }
+ words+='s '+choose(intrans)+' .';
+ return words;
+}
+function cave() {
+ var adjs=('debugged,'+choose(texture)+' authoring,procedural,alone').split(',');
+ var target=1+rand_range(3);
+ while (adjs.length>target) {
+  adjs.splice(rand_range(adjs.length),1);
+  }
+ var words='\u00a0\u00a0'+choose(imper)+' the '+adjs.join(' ')+' \u2014';
+ return words;
+}
+function do_line() {
+ var main=document.getElementById('main');
+ if (t<=25) {
+  t+=1;
+ } else {
+  main.removeChild(document.getElementById('main').firstChild);
+ }
+ if (n===0) {
+  text=' ';
+ } else if (n==1) {
+  paths=2+rand_range(2);
+  text=path();
+ } else if (n<paths) {
+  text=site();
+ } else if (n==paths) {
+  text=path();
+ } else if (n==paths+1) {
+  text=' ';
+ } else if (n==paths+2) {
+  text=cave();
+ } else {
+  text=' ';
+  n=0;
+ }
+ n+=1;
+ text=text.substring(0,1).toUpperCase()+text.substring(1,text.length);
+ last=document.createElement('div');
+ last.appendChild(document.createTextNode(text));
+ main.appendChild(last);
+}
+function poem() {
+ setInterval(do_line, 1200);
+}
+</script>
+  </head><body onload="poem()"><h1>Tournedo Gorge</h1>
+  <h3>"Let things taste of what they are."<br>--Alice Waters</h3>
+
+
+<div style="float:right; margin-top:290px; color:#0b3; height:60pt">
+<div>Taroko Gorge</div>
+<del><a href="http://nickm.com/poems/taroko_gorge_original.html">Nick Montfort</a></del><br>
+<del><a href="http://retts.net/tokyogarage.html">Scott Rettberg</a></del><br>
+<del><a href="http://luckysoap.com/generations/gorge.html">J.R. Carpenter</a></del><br>
+<del><a href="http://luckysoap.com/generations/whisperwire.html">J.R. Carpenter</a></del><br>
+<del><a href="http://luckysoap.com/alongthebrinybeach/">J.R. Carpenter</a></del><br>
+<del><a href="http://talanmemmott.com/drp_web/text_gen/toygarbage/">Talan Memmott</a></del><br>
+<del><a href="http://exinfoam.wordpress.com/2011/07/18/yoko-engorged/">Eric Snodgrass</a></del><br>
+<del><a href="http://samplereality.com/elit/takeigeorge.html">Mark Sample</a></del><br>
+<del><a href="http://polyaesthetics.org/AloneEngaged.html">Maria Engberg</a></del><br>
+<del><a href="http://www.madelineklink.com/portfolio/fredandgeorge.html">Flourish Klink</a></del><br>
+<del><a href="http://www.eblong.com/zarf/argot-ogre-ok.html">Andrew Plotkin</a></del><br>
+<del><a href="http://wintermute.org/brendan/?p=designer-gulch">Brendan Howell</a></del><br>
+<del><a href="http://mason.gmu.edu/~asylvain/">Adam Sylvain</a></del><br>
+<del><a href="http://leonardoflores.net/tarokogary">Leonardo Flores</a></del><br>
+<del><a href="http://alimahzoon.com/html/mp2ab/final2.html">Alireza Mahzoon</a></del><br>
+<del><a href="http://thefwordsrt.appspot.com/cameltail.html">Sonny Rae Tempest</a></del><br>
+<del><a href="http://nickm.com/">Nick Montfort · 2012-06-21</a></del><br>
+<a href="http://berens.org/kib/elit/tournedogorge.html">Kathi Inman Berens</a>
+</div>
+<div id="main"><div> </div><div>Menus chop the  stove.</div><div>Operators function.</div><div>Sinks removeChild.</div><div>Tables chop the div.</div><div> </div><div>&nbsp;&nbsp;embrace the debugged fine authoring procedural alone —</div><div> </div><div>Recipe minces the divs.</div><div>FirstChilds savor.</div><div>Inheritance edits the  stove.</div><div> </div><div>&nbsp;&nbsp;turn the debugged fine authoring procedural alone —</div><div> </div><div>Table edits the divs.</div><div>Menu runs the pasture.</div><div> </div><div>&nbsp;&nbsp; eat the debugged procedural alone —</div></div>
+
+</body></html>
