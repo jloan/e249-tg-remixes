@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!This here is a total remix of the classic and elegant generated nature poem Tokoro Gorge by Nick Montfort. He wrote the code here. I hacked the words to make it more about urbanity, modernity, and my idea of Tokyo, a city I have never been to. Remixed March 18, 2009 by Scott Rettberg.>
+<html>
+
+    <head>
+        <style type="text/css">
+            /* <![CDATA[ */
+            body {
+                background: #000;
+                color:green;
+                margin: 10 34pt 10 34pt;
+                font-family: Optima, sans-serif;
+                font-size: 30pt;
+            }
+            div {
+                height: 26pt;
+            }
+            a {
+                color: #FF66FF;
+                text-decoration: none;
+            }
+            /* ]]> */
+        </style>
+        <script language="JavaScript" type="text/javascript">
+            var t = 0
+            var n = 0
+            var paths = 0
+            var above = 'lary whiteboard,private servant,procrastinator,drag queen,divorced cat,addicted dragon,mover star,tourie,teen,zombie goth girl,japanese schoolboy,hentai busdriver,Knightrider,stockblaster,screeching siren,saxaphonultist,spokesmodel devorcee,ratatat,translactose,rock starsaber,retired prostitute,prostateitute,dawn,hero protoganist,neographic sign,traffic jam,motorcycle messenger,drummerdruid,godzilla gang,costumed mascot for the mob,enhancement vending machine,samurai abstinance patrol,private dicktective,massively multiplayer augmented reality game,chatturbate client,devout worshiper,bodyshrine,buddha jesus,BDSM jesus freak,landstander,catsune,dragon in drag,puppeteer candy bar,hallucination inc.,shrine,uber chauffeur,mute,technicolor knightmare,private security agent ;),temple-o-time,vigor student,supercomputer,ninja brian,cultist of the cult,gentle scholar,speed racer fan girl,undercover cop,earthquake,fish monger,contortionist,bag of microchips,gamercatsune,yakuza kitten,freeter,aristocraticat,shogun tenticle warrior,gambler cat,bathroom surveillance camera,watcher,private pirate,occidental,computer scientist,monk,space invader zim,talk show host,noh enthusiast,juggler,cowboyjesus,cosplayer furries,blogger,hacker,detective,alternative medicine specialist,smoker,atomic plug,thug,architect,technocrat'.split(',')
+             var below = 'Roppongi drunken master,Shibuya shopper,gaijin,geishabhudda,manga addict,pachinko parlor,cherry blossom vape pods,sumosmoker,kanji,nose ringworm,whaleburger,supermodel motel,pickpocket patch kids,delicate fucking flower,villian,speedwalker,designer,stop sign dancer,teacher,sailor,banker,kabuki dancer,clown,magician,virtual pet,correspondent,dog,kung-fu fighter,cleric,bureaucrat,freak,robot,fruitseller,author,dreamer,panda bear,stranger,hip cat,dealer,automaton,mystic,kid,pink kitten,monster,soldier,diplomat,nun,subway,machine,market,politician,host,transvestite,cigarette,subject,sushi joint,ingenue,shadow,lantern,cuisine,black widow,libation,scandal,pain,processor,routine,motorcycle gang,vintage cadillac,mobile phone,casino,rocketeer,fund,altruist,embezzler,spiritual seeker,DJ,other'.split(',')
+             var trans = 'warm,warn,forgive,pick,hustle,trail,frame,sweep,smell,grope,arrange,fondle,adoring yandere,confuse,covet,regret,squeze,molest,finger,subjugate,subdue,hassle,orient,dream,hate,jam,transform,transport,reorient,bribe,remove,chill,educate,inform,deceive,rescue,simulate,stimulate,eroticize,follow,assault,serenade,become,enlist,corrupt,shadow,smoke,shake,frighten,swindle,skin,critique,rearrange,preserve,freak,grok,liquidate,fund,comfort,welcome,greet,eye,love,detest,test,unsettle,arrest,defend,expose,profile,ceremonialize,proselytize,purchase,drain,contaminate'.split(',')
+             var imper = 'watch,beat,translate,caress,go to,stumble through,run,enter,defeat,promote,finger,dominate,explain,paint,command,direct,revivify,sing,sing damn you sing,script,remember,disregard,concantenate,suffer,recall,absorb,forgive,scramble,rattle,harmonize,synthesize,pardon,excuse,explore,digest,apologize for,process,consider,embellish,forget,signify,deconstruct,protect,endure,sculpt,eliminate,forego,imagine,curse,bless,waste'
+            imper = imper.split(',')
+             var intrans = 'fall,dwell,rock,circle,clamor,dream,sing,imitate,debate,evacuate,harass,twist,reverse,pay,expire,sing,recover,destroy,investigate,fail,succeed,win,drop,burn,explode,rest,regenerate,halt,perspire,conspire,walk'.split(',')
+             var s = 's,'.split(',')
+             var texture = 'smooth,waxy,rough,slick,silken,gummy,squishy,scaly,bumpy,wet'.split(',')
+
+                function rand_range(max) {
+                    return Math.floor(Math.random() * (max + 1))
+                }
+
+                function choose(array) {
+                    return array[rand_range(array.length - 1)]
+                }
+
+                function path() {
+                    var p = rand_range(1)
+                    var words = choose(above)
+                    if ((words == 'pachinko parlor') && (rand_range(3) == 1)) {
+                        words = 'mobile phone ' + choose(trans)
+                    } else {
+                        words += s[p] + ' ' + choose(trans) + s[(p + 1) % 2]
+                    }
+                    words += ' the ' + choose(below) + choose(s) + '.'
+                    return words
+                }
+
+                function site() {
+                    var words = ''
+                    if (rand_range(2) == 1) {
+                        words += choose(above)
+                    } else {
+                        words += choose(below)
+                    }
+                    words += 's ' + choose(intrans) + '.'
+                    return words
+                }
+
+                function cave() {
+                    var adjs = ('overwhelming,' + choose(texture) + ',lithe,uptight,nervous,smoke-filled,dizzy,drunken,sated,dim,foggy,electric,blazing,artificial,curvy,inhospitable,welcome,jazzy,confused,disorganized,shabby,ancient,modern,digital,cacophonous,seedy,elegant,strangely quiet,incoherent,puzzling,troubling,disconcerting,awkwardly familiar,shining,new,odiferous,unyielding,chaotic,disoriented,infantile,blessed,futuristic,mysterious,bizarre,banal,chilling,definitive,translucent,opaque,glowing,noisy,silent,sexist,amazing,robotic,dreamy,floating,alien,paranoid,blinking,scantily clad,robust,misty,romantic,techno,noir,epic,tragic,comic,aimless,scattered,binary,metallic,plasticine,all-absorbing,stinking,insanely electic,multitudinous,endless,abbreviated,repressed,oversexed,cheap,expensive,cruel,forgiving,electric,peripheral').split(',')
+                    var target = 1 + rand_range(3)
+                    while (adjs.length > target) {
+                        adjs.splice(rand_range(adjs.length), 1)
+                    }
+                    var words = '\u00a0\u00a0' + choose(imper) + ' the ' + adjs.join(' ') + '--'
+                    return words
+                }
+
+                function do_line() {
+                    var main = document.getElementById('main')
+                    if (t <= 25) {
+                        t += 1
+                    } else {
+                        main.removeChild(document.getElementById('main').firstChild)
+                    }
+                    if (n == 0) {
+                        text = ' '
+                    } else if (n == 1) {
+                        paths = 2 + rand_range(2)
+                        text = path()
+                    } else if (n < paths) {
+                        text = site()
+                    } else if (n == paths) {
+                        text = path()
+                    } else if (n == paths + 1) {
+                        text = ' '
+                    } else if (n == paths + 2) {
+                        text = cave()
+                    } else {
+                        text = ' '
+                        n = 0
+                    }
+                    n += 1
+                    text = text.substring(0, 1).toUpperCase() + text.substring(1, text.length)
+                    last = document.createElement('div')
+                    last.appendChild(document.createTextNode(text))
+                    main.appendChild(last)
+                }
+
+                function poem() {
+                    setInterval('do_line()', 1150)
+                }
+        </script>
+        <title>Tokyo Garage</title>
+    </head>
+
+    <body onload="poem()">
+        <div style="float:right; color:#0b3; height:60pt">
+            <div></div>
+            <div>Tokyo Garage</div>
+            <div><del><a href="http://nickm.com">Nick Montfort</a></del>
+                <br/><a href="http://nickm.com">Scott Rettberg</a>
+            </div><a href="http://nickm.com">Randiey Johnson</a>
+        </div>
+        </div>
+        <div id="main"></div>
+    </body>
+
+</html>
